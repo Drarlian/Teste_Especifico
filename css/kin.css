@@ -194,7 +194,7 @@ input{
   display: none;
   /*border: solid;*/
   max-height: 1000px;
-  max-width: 585px;
+  max-width: 650px;
   padding: 20px;
   text-align: center;
 }
@@ -202,6 +202,7 @@ input{
 .guardador {
   display: flex;
   text-align: left;
+  max-width: 650px;
 }
 
 .portador h1{
