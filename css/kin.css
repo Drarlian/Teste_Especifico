@@ -127,7 +127,7 @@ header {
 }
 
 .formulario{
-  max-width: 210px;
+  max-width: 400px;
   padding: 20px;
   /*text-align: center;*/
   border: 2px solid #ff7f07;
@@ -162,7 +162,7 @@ input{
 
 .infos-cep {
   max-height: 340px;
-  max-width: 210px;
+  max-width: 400px;
   padding: 20px;
   /*text-align: center;*/
   border: 2px solid #ff7f07;
