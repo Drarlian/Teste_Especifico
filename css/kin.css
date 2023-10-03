@@ -1,0 +1,298 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(8, 8, 8, 0.94);
+  color: #ffffff;
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/* Divisor */
+
+/* Estilo para o menu superior */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #ff7f07;
+}
+
+.informacoes-usuario {
+  display: flex;
+  align-items: center;
+  color: #ff7f07;
+}
+
+.menu button {
+  background-color: #ff7f07;;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.menu button:hover {
+  background-color: #cc0000;
+}
+
+.menu p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.menu img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Tentando deixar o menu responsivo */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu h1 {
+    margin-bottom: 10px;
+  }
+
+  .informacoes-usuario {
+    margin-top: 10px;
+  }
+
+  .menu button {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+}
+
+/* Estilos para as abas */
+.tabs {
+  /* background-color: #f10707; */
+  color: #ffffff;
+  padding: 10px 0 10px 10px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  top: 60px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #555;
+}
+
+.tab#tab-usuarios{
+  color: #ff7f07;
+}
+
+/* Estilos para o conteúdo da aba */
+.content {
+  margin-top: 120px;
+  padding: 20px;
+}
+
+.formulario{
+  max-width: 210px;
+  padding: 20px;
+  /*text-align: center;*/
+  border: 2px solid #3cd51c;
+  /*background-color: rgb(4, 4, 4);*/
+  border-radius: 10px;
+  /*margin-top: -50px;*/
+  margin-left: 25px;
+}
+
+.formulario button{
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff7f07;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.formulario button:hover {
+  background-color: rgba(255, 127, 7, 0.78);
+}
+
+input{
+  padding: 5px;
+  margin: 5px;
+}
+
+.infos-cep {
+  max-height: 340px;
+  max-width: 210px;
+  padding: 20px;
+  /*text-align: center;*/
+  border: 2px solid #3cd51c;
+  /*background-color: rgb(4, 4, 4);*/
+  border-radius: 10px;
+  display: none;
+  /*margin-top: -50px;*/
+  margin-left: 25px;
+}
+
+.infos-cep button{
+  margin-top: 10px;
+  margin-left: 2px;
+  margin-right: auto;
+  background-color: #ff7f07;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.infos-cep button:hover {
+  background-color: rgba(255, 127, 7, 0.78);
+}
+
+.portador{
+  display: none;
+  /*border: solid;*/
+  max-height: 1000px;
+  max-width: 585px;
+  padding: 20px;
+  text-align: center;
+}
+
+.guardador {
+  display: flex;
+  text-align: left;
+}
+
+.portador h1{
+  margin-bottom: 20px;
+  color: #ff7f07;
+}
+
+.div-tabela {
+  text-align: center;
+  /*border: 2px solid #3cd51c;*/
+  padding: 5px;
+  max-width: 1320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.div-tabela h1{
+  color: #ff7f07;
+}
+
+.tabela{
+  display: none;
+}
+
+.tabela td {
+  padding: 12px 12px 12px 4px;
+  text-align: left;
+}
+
+.tabela th {
+  /*border: solid;*/
+  background-color: #222222;
+  color: #cccccc;
+  padding: 5px 10px;
+}
+
+.div-visualizar {
+  display: none;
+  border: 2px solid #3cd51c;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: left;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.div-visualizar p {
+  margin-bottom: 10px;
+}
+
+.div-tabela button{
+  background-color: #ff7f07;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.div-tabela button:hover {
+  background-color: rgba(255, 127, 7, 0.78);
+}
+
+
+.div-editar {
+  display: none;
+  padding: 20px;
+  max-width: 700px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.info-basica-ed {
+  border: 2px solid #3cd51c;
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info-cep-ed {
+  border: 2px solid #3cd51c;
+  flex: 1;
+  padding: 10px;
+  margin-left: 25px;
+  max-height: 340px;
+  border-radius: 10px;
+}
+
+.info-cep-ed button{
+  margin-top: 8px;
+}

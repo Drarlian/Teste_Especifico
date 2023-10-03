@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>TesteEspecifico</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/kin.css">
+</head>
+<body class="hidden">
+  <header>
+      <!-- Menu -->
+      <div class="menu">
+          <h1>Teste Específico</h1>
+          <div class="informacoes-usuario">
+              <button id="botao_logout">Logout</button>
+              <p id="nome">Nome do Usuário</p>
+              <img id="imagem-usuario" src="" alt="imagem_de_perfil">
+          </div>
+      </div>
+  </header>
+
+  <!-- Abas -->
+  <div class="tabs">
+      <div class="tab" id="tab-usuarios">Usuário</div>
+      <div class="tab" id="tab-cadastrar">Cadastrar Usuário</div>
+  </div>
+
+  <!-- Conteúdo da página -->
+  <div class="content" id="conteudo">
+    <!-- Formulário -->
+    <div class="portador" id="portador">
+      <h1>Cadastrar Usuário</h1>
+      <div class="guardador">
+        <div class="formulario" id="formulario">
+        <form id="formulario1">
+          <label for="name">Nome:</label>
+          <br/>
+          <input type="text" id="name" name="nome" placeholder="Nome">
+          <br/>
+          <label for="sobrenome">Sobrenome:</label>
+          <br/>
+          <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+          <br/>
+          <label for="email">Email:</label>
+          <br/>
+          <input type="email" id="email" name="email" placeholder="Email">
+          <br/>
+          <label for="telefone">Telefone:</label>
+          <br/>
+          <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
+          <br/>
+          <label for="cep">CEP:</label>
+          <br/>
+          <input type="text" id="cep" name="cep" placeholder="CEP">
+          <br/>
+          <label for="habilidades">Habilidades:</label>
+          <br/>
+          <input type="text" id="habilidades" name="habilidades" placeholder="Habilidades | Ex: Html, CSS e Javascript">
+          <br/>
+          <button type="button" id="mostrar_segunda_div">Continuar</button>
+        </form>
+      </div>
+
+        <div class="infos-cep" id="infos-cep">
+        <form id="formulario2">
+          <label for="numero">Numero:</label>
+          <br/>
+          <input type="number" id="numero" name="numero" placeholder="Nº">
+          <br/>
+          <label for="rua">Rua:</label>
+          <br/>
+          <input type="text" id="rua" name="rua" placeholder="Rua">
+          <br/>
+          <label for="bairro">Bairro:</label>
+          <br/>
+          <input type="text" id="bairro" name="bairro" placeholder="Bairro">
+          <br/>
+          <label for="cidade">Cidade:</label>
+          <br/>
+          <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+          <br/>
+          <label for="estado">Estado:</label>
+          <br/>
+          <input type="text" id="estado" name="estado" placeholder="Estado">
+          <br/>
+          <button type="submit" id="cadastar">Cadastrar</button>
+          <button type="button" id="voltar">Voltar</button>
+        </form>
+      </div>
+      </div>
+    </div>
+
+    <!-- Tabela -->
+    <div class="div-tabela" id="div-tabela">
+      <h1 id="titulo-usuario"></h1>
+      <table class="tabela" id="tabela">
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+          <th>Rua</th>
+          <th>Bairro</th>
+          <th>Cidade</th>
+          <th>UF</th>
+          <th>CEP</th>
+          <th>Ações</th>
+        </tr>
+        <tr>
+          <td id="nome-tb"></td>
+          <td id="email-tb"></td>
+          <td id="telefone-tb"></td>
+          <td id="rua-tb"></td>
+          <td id="bairro-tb"></td>
+          <td id="cidade-tb"></td>
+          <td id="estado-tb"></td>
+          <td id="cep-tb"></td>
+          <td>
+            <button id="editar">Editar</button>
+            <button id="visualizar">Visualizar</button>
+            <button id="excluir">Excluir</button>
+          </td>
+        </tr>
+      </table>
+
+      <div class="div-visualizar" id="div-visualizar">
+        <p><strong>Nome:</strong> <span id="nome-vs"></span></p>
+        <p><strong>E-mail:</strong> <span id="email-vs"></span></p>
+        <p><strong>Telefone:</strong> <span id="telefone-vs"></span></p>
+        <p><strong>Rua:</strong> <span id="rua-vs"></span></p>
+        <p><strong>Número:</strong> <span id="numero-vs"></span></p>
+        <p><strong>Bairro:</strong> <span id="bairro-vs"></span></p>
+        <p><strong>Cidade:</strong> <span id="cidade-vs"></span></p>
+        <p><strong>UF:</strong> <span id="estado-vs"></span></p>
+        <p><strong>CEP:</strong> <span id="cep-vs"></span></p>
+        <p><strong>Habilidades:</strong> <span id="habilidades-vs"></span></p>
+        <button type="button" id="voltar-vs">Voltar</button>
+      </div>
+
+      <div class="div-editar" id="div-editar">
+        <div class="info-basica-ed" id="info-basica-ed">
+          <form id="formulario1-ed">
+          <label for="name-ed">Nome:</label>
+          <br/>
+          <input type="text" id="name-ed" name="nome" placeholder="Nome">
+          <br/>
+          <label for="sobrenome-ed">Sobrenome:</label>
+          <br/>
+          <input type="text" id="sobrenome-ed" name="sobrenome" placeholder="Sobrenome">
+          <br/>
+          <label for="email-ed">Email:</label>
+          <br/>
+          <input type="email" id="email-ed" name="email" placeholder="Email">
+          <br/>
+          <label for="telefone-ed">Telefone:</label>
+          <br/>
+          <input type="tel" id="telefone-ed" name="telefone" placeholder="Telefone">
+          <br/>
+          <label for="cep-ed">CEP:</label>
+          <br/>
+          <input type="text" id="cep-ed" name="cep" placeholder="CEP">
+          <br/>
+          <label for="habilidades-ed">Habilidades:</label>
+          <br/>
+          <input type="text" id="habilidades-ed" name="habilidades" placeholder="Habilidades | Ex: Html, CSS e Javascript">
+        </form>
+        </div>
+        <div class="info-cep-ed" id="info-cep-ed">
+          <form id="formulario2-ed">
+          <label for="numero-ed">Numero:</label>
+          <br/>
+          <input type="number" id="numero-ed" name="numero" placeholder="Nº">
+          <br/>
+          <label for="rua-ed">Rua:</label>
+          <br/>
+          <input type="text" id="rua-ed" name="rua" placeholder="Rua">
+          <br/>
+          <label for="bairro-ed">Bairro:</label>
+          <br/>
+          <input type="text" id="bairro-ed" name="bairro" placeholder="Bairro">
+          <br/>
+          <label for="cidade-ed">Cidade:</label>
+          <br/>
+          <input type="text" id="cidade-ed" name="cidade" placeholder="Cidade">
+          <br/>
+          <label for="estado-ed">Estado:</label>
+          <br/>
+          <input type="text" id="estado-ed" name="estado" placeholder="Estado">
+          <br/>
+          <button type="button" id="atualizar-ed">Atualizar</button>
+          <button type="button" id="voltar-ed">Voltar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Valida Entrada:
+    const userData = localStorage.getItem('user');
+
+    if (!userData) {
+        window.location.href = 'index.html';
+    } else {
+      document.querySelector('body').classList.remove('hidden');
+
+      document.addEventListener('DOMContentLoaded', function () {
+
+      const user_data = JSON.parse(localStorage.getItem('user'));
+
+      document.getElementById('nome').textContent = user_data.name;
+      document.getElementById('imagem-usuario').src = user_data.avatar_url;
+    });
+  }
+  </script>
+  <script>
+    // Desloga
+    const botao_logout = document.getElementById('botao_logout');
+
+    botao_logout.addEventListener('click', () => {
+      const confirmacao = window.confirm('Tem certeza de que deseja deslogar?');
+
+      if (confirmacao) {
+        localStorage.removeItem('user');
+        localStorage.removeItem('dados_formularios');
+
+        window.alert('Deslogando...')
+        window.location.href = 'index.html';
+      } else{
+        window.alert('Ok! Você NÃO será deslogado!')
+      }
+    });
+  </script>
+  <script src="js/kin.js"></script>
+</body>
+</html>
