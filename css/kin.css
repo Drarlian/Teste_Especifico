@@ -130,7 +130,7 @@ header {
   max-width: 210px;
   padding: 20px;
   /*text-align: center;*/
-  border: 2px solid #3cd51c;
+  border: 2px solid #ff7f07;
   /*background-color: rgb(4, 4, 4);*/
   border-radius: 10px;
   /*margin-top: -50px;*/
@@ -165,7 +165,7 @@ input{
   max-width: 210px;
   padding: 20px;
   /*text-align: center;*/
-  border: 2px solid #3cd51c;
+  border: 2px solid #ff7f07;
   /*background-color: rgb(4, 4, 4);*/
   border-radius: 10px;
   display: none;
@@ -242,7 +242,7 @@ input{
 
 .div-visualizar {
   display: none;
-  border: 2px solid #3cd51c;
+  border: 2px solid #ff7f07;
   border-radius: 10px;
   max-width: 300px;
   text-align: left;
@@ -278,14 +278,14 @@ input{
 }
 
 .info-basica-ed {
-  border: 2px solid #3cd51c;
+  border: 2px solid #ff7f07;
   flex: 1;
   padding: 10px;
   border-radius: 10px;
 }
 
 .info-cep-ed {
-  border: 2px solid #3cd51c;
+  border: 2px solid #ff7f07;
   flex: 1;
   padding: 10px;
   margin-left: 25px;

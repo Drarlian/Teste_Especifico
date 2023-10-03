@@ -25,8 +25,6 @@ tab_cadastrar.addEventListener('click', () => {
   div_tabela.style.display = 'none';
   tab_usuarios.style.color = '#ffffff';
   tab_cadastrar.style.color = '#ff7f07';
-
-  // esvazia_tabela()
 });
 
 
@@ -40,7 +38,7 @@ const campo_estado = document.getElementById('estado');
 
 mostrar_segunda_div_button.addEventListener('click', function() {
   if (campo_cep.value.trim() !== '') {
-    // URL da API adicionando o campo CEP:
+    // URL da API + o campo CEP:
     const url = `https://brasilapi.com.br/api/cep/v1/${campo_cep.value}`;
 
     // Criando uma instância do objeto XMLHttpRequest:
@@ -81,7 +79,6 @@ botao_voltar.addEventListener('click', () => {
 })
 
 
-// Selecione os formulários
 const formulario1 = document.getElementById('formulario1');
 const formulario2 = document.getElementById('formulario2');
 
@@ -128,11 +125,13 @@ document.addEventListener('submit', (event) => {
 function preenche_tabela(){
   const dados_armazenados = localStorage.getItem('dados_formularios');
   const tabela1 = document.getElementById('tabela');
+  const titulo_usuario = document.getElementById('titulo-usuario');
 
   if (dados_armazenados) {
     const dados_objeto = JSON.parse(dados_armazenados);
 
     tabela1.style.display = 'flex';
+    titulo_usuario.textContent = 'Usuário Cadastrado';
 
     // Preenchendo os campos da tabela com os valores do objeto:
     document.getElementById('nome-tb').textContent = dados_objeto.nome + ' ' + dados_objeto.sobrenome || '';
@@ -145,7 +144,6 @@ function preenche_tabela(){
     document.getElementById('cep-tb').textContent = dados_objeto.cep || '';
   } else{
       try {
-        const titulo_usuario = document.getElementById('titulo-usuario');
         const div_visualizar1 = document.getElementById('div-visualizar');
         const div_editar1 = document.getElementById('div-editar');
 
@@ -294,7 +292,7 @@ botao_atualizar.addEventListener('click', () => {
           form_data_object2[key] = value;
           });
 
-          // Verifique se os campos estão preenchidos
+          // Verificando se os campos estão preenchidos:
           if (Object.values(form_data_object1).every((value) => value.trim() !== '') &&
               Object.values(form_data_object2).every((value) => value.trim() !== '')) {
             const dadosCombinados = { ...form_data_object1, ...form_data_object2 };
